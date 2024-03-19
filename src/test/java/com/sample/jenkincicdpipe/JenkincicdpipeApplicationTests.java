@@ -19,9 +19,9 @@ class JenkincicdpipeApplicationTests {
     @Test
     public void testGreetingsEndPoints() throws Exception {
 
-        String name="Satya Ranjan Behera";
+        String name="SatyaRanjan";
 
-        mvc.perform(MockMvcRequestBuilders.get("/greetings/{name}",name)).
+        mvc.perform(MockMvcRequestBuilders.get("/greeting/{name}",name)).
                 andExpect(MockMvcResultMatchers.status().isOk()).
                 andExpect(MockMvcResultMatchers.content().string("Hello" + name + "congratulations for fist CICD Demo"));
 
